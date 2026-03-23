@@ -26,8 +26,10 @@ SECRET_KEY = 'django-insecure-ql18m%2(j@2hmfz)+z8c-+)47n4++g^w55_sq=w(97a#6jcwpj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tz-django-project.onrender.com']
 CSRF_TRUSTED_ORIGINS = ['https://tz-django-project.onrender.com']
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 
 # Application definition
