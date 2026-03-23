@@ -1,1 +1,0 @@
-web: gunicorn nova_store.wsgi
