@@ -28,9 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['tz-django-project.onrender.com']
 CSRF_TRUSTED_ORIGINS = ['https://tz-django-project.onrender.com']
-SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'None'
 
 # Application definition
 
