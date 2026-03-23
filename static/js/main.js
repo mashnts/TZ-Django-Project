@@ -88,10 +88,13 @@ function resetFilters() {
 }
 
 function getCookie(name) {
+    if (name === 'csrftoken') {
+        return document.querySelector('[name=csrfmiddlewaretoken]')?.value || '';
+    }
     const cookies = document.cookie.split(';');
     for (let cookie of cookies) {
-        const [key, value] = cookie.trim().split('=');
-        if (key === name) return value;
+        const parts = cookie.trim().split('=');
+        if (parts[0].trim() === name) return decodeURIComponent(parts.slice(1).join('='));
     }
     return '';
 }

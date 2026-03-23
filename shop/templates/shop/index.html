@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    {% csrf_token %}
     <div class="overlay" id="overlay" onclick="document.getElementById('cartModal').classList.remove('open'); this.classList.remove('active')"></div>
     <header>
     <div class="header-inner">
